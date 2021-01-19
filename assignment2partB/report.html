@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+
+    <title>WaterfordSPCA</title>
+    <link rel="stylesheet" href="css/mycss.css">
+</head>
+
+
+<body>
+    <div class="ui container">
+
+        <div class="ui grid">
+
+            <div class="ui four item menu">
+                <a class="item" href="index.html">Home</a>
+                <a class="item" href="AboutUs.html">About Us</a>
+                <a class="item" href="Adoptions.html">Adoptions</a>
+                <a class="active item" href="report.html">Report Cruelty</a>
+            </div>
+
+
+            <h1 class="ui header">Report Animal Cruelty</h1>
+            <div class="ui segment">
+                <p>In order to report cruelty please fill out the web form below and give as much detail as possible for each field.</p>
+                <form action="process.html" method="get" id="contact" name="contact" class="ui form">
+
+                    <div class="inline field">
+                        <label for="pname" class="three wide field">Contact Name</label>
+                        <input type="text" name="contactname" id="pname" required pattern="[A-Z][a-z]+( [A-Z][a-z]+)?" autofocus title="Please enter a name (Surname optional) with First Letter capitalised followe by at least 1 lowercase letter" class="eight wide field">
+                    </div>
+                    <div class="inline field">
+                        <label for="TelephoneNumber" class="three wide field">Telephone Number</label>
+                        <input type="text" name="TelephoneNumber" id="TelephoneNumber" required pattern="^((\d{3})|\d{3})-?\d{6,9}$" title=" only valid telephone numbers" class="eight wide field">
+                    </div>
+                    <div class="inline field">
+                        <label for="Email" class=" three wide field">Email Adress</label>
+                        <input type="email" name="Email" id="Email" required pattern="^[a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,4})$" title="only valid email addresses" class="eight wide field">
+                    </div>
+                    <div class="inline field">
+                        <label for="ComplainedName" class="three wide  field"> Name of person complained of</label>
+                        <input type="text" name="ComplainedName" id="ComplainedName" required pattern="[a-zA-Z0-9]{3}" title="at least 3 charachters" class="eight wide field">
+                    </div>
+                    <div class="inline field">
+                        <label for="DateOfReport" class="three wide  field">Date of report</label>
+                        <input type="Date" name="DateOfReport" id="DateOfReport" required title="date required" class="eight wide field">
+                    </div>
+                    <div class="inline field">
+                        <label for="region" class="three wide field">What region is the event in?</label>
+
+                        <select name="region" id="region" class="eigh wide field">
+                            <option value="win32">City Centre</option>
+                            <option value="mac">Hillview</option>
+                            <option value="linux">Ferrybank</option>
+                            <option value="win32">Ballybeg</option>
+                            <option value="mac">Dunmore East</option>
+                            <option value="linux">Carigeen</option>
+                            <option value="win32">Tramore</option>
+                            <option value="mac">Ardkeen</option>
+                            <option value="linux">Dungarvan</option>
+                            <option value="linux">Elsewhere</option>
+
+                        </select>
+                    </div>
+                    <div class="inline field">
+                        <label for="details"> details of cruelty , provide as many details as possible</label>
+                        <textarea id="details" rows="5" cols="80"></textarea></div>
+                    <div class="inline field">
+                        <br><br>If we need to call you back for any more info what would be the best time to call you on the number supplied?
+                        <br><input style="float:left" type="radio" name="format" id="text" value="text" checked="checked">
+                        <label for="text" style="float:left"> In the morning</label>
+                        <br><input style="clear:left; float:left" type="radio" name="format" id="html" value="html" /> <label for="html" style="float:left"> In the afternoon</label>
+                        <br><input style="clear:left; float:left" type="radio" name="format" id="pdf2" value="pdf2" /><label for="pdf" style="float:left"> In the evening</label><br><input style="clear:left; float:left" type="radio" name="format" id="pdf" value="pdf" /><label for="pdf" style="float:left"> No Calls Please</label>
+                    </div>
+                    <div class="inline field">
+                        We may have to include Garda, ISPCA, Dept of Agriculture, Food and the Marine, Social Services etc in the investigation.<br>
+                        <input type="checkbox" name="use" id="use" value="subscribe" checked="checked" style="float:left">
+                        <label for="use" style="float:left">I understand</label>
+                    </div>
+                    <div class="inline field">
+                        <p>
+
+                            <br>
+                            <input type="submit" class="ui submit button" value="Submit">
+                            <input type="reset" class="ui reset button" value="Reset">
+                        </p>
+                    </div>
+
+                </form>
+
+            </div>
+            <footer>
+                <h3>Contact Us</h3>
+                <div class="ui list">
+                    <div class="adress">Waterford SPCA Office: Summerland Square, Yellow Road, Waterford.</div>
+                    <div class="phone">Phone: 051-01001001.</div>
+                    <div class="email">Email:example@gmail.com</div>
+                </div>
+                <table class="ui  striped  table">
+
+                    <thead>
+                        <tr>
+                            <th>Days </th>
+                            <th>Openning time</th>
+                            <th>Closing time</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td data-label="Days">Monday-Friday</td>
+                        <td data-label="Opening time"> 9a.m</td>
+                        <td data-label="Closing time">6pm</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Days">Saturday-Sunday</td>
+                        <td data-label="Opening time">Closed</td>
+                        <td data-label="Closing time">Closed</td>
+                    </tr>
+
+                </table>
+
+                <form action="https://www.instagram.com/waterfordspca/?fbclid=IwAR2gUMOzNva8J55kbVdYyyxKe1aEIjDPMG_ytNmKF7YOFUsw8A_D_YoatQc" method="get" target="_blank">
+                    <button class="ui  left floated instagram button" type="submit"><i class="instagram icon"></i>Instagram</button></form>
+
+
+                <form action="https://www.facebook.com/waterfordspca/" method="get" target="_blank">
+                    <button class="ui  facebook button" type="submit"><i class="facebook icon"></i>Facebook</button>
+                </form>
+
+            </footer><img class="ui  right floated image" src="images/backgroundimage.png" alt="background image">
+
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+        </div>
+    </div>
+</body></html>
